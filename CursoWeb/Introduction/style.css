@@ -1,0 +1,19 @@
+body{
+  background-color: cadetblue;
+  font-size: 30px;
+  color: bisque;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  letter-spacing: 10px;
+  text-shadow: 1px 1px;
+  padding: 50px;
+}
+
+button{
+  background-color: rgb(168, 74, 223);
+  padding: 10px 20px;
+  border: none;
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
+}

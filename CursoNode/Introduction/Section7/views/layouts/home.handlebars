@@ -1,0 +1,17 @@
+<h1>Olá handlebars</h1>
+
+<!-- Tem que chamar desse arquivo que ele coloca junto o que ta no arquivo main-->
+
+<p>O nome da pessoa é {{user.name}}, ela tem {{user.age}} anos </p> <!-- Peguei o dado passado como res na rota e estou usando para imprimir no html-->
+
+{{#if aprov}}
+  <p>Parabéns, sua inscrição foi aprovada </p>
+{{else}}  
+  <p>Sua inscrição nao foi aprovada, logo, você não tem acesso ao conteúdo</p>
+{{/if}}
+
+{{#if aute}} <!-- Não pode fazer condição , somente isso, se for verdade ele faz o código-->
+  <p>Você esta autenticado, <a href="./autenticada">Clique aqui</a> para acessar a pagina</p>
+{{/if}}
+
+

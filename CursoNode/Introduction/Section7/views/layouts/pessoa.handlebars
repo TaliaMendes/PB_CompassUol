@@ -1,0 +1,9 @@
+<!-- Em vez de chamar o 'obj.prop' , 
+ essa função deixa ir direto para a propriedade, não precisa referenciar o objeto-->
+
+{{#with pessoa}} <!--pessoa: È um objeto -->
+  <p>O nome da pessoa é {{name}}, ela tem {{age}} anos, e mora na cidade de {{cidade}} </p>
+{{/with}} 
+
+<!--Não é necessario referenciar as propriedades do objeto desta forma: {{pessoa.name}}  -->
+
