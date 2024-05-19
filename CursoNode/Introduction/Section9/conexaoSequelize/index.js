@@ -33,7 +33,7 @@ app.get('/users/create', (req, res) => {
   res.render('adduser')
 })
 
-app.post('/users/create', async,(req, res) => { 
+app.post('/users/create', async(req, res) => { 
   const name = req.body.name
   const occupation = req.body.occupation
   let newsletter = req.body.newsletter
@@ -52,7 +52,7 @@ app.post('/users/create', async,(req, res) => {
 
 
 
-app.get ('/users/:id', async, (req, res) => {
+app.get ('/users/:id', async (req, res) => {
   const id = req.params.id
 
   //retornando dados do bd com o filtro WHERE
@@ -61,7 +61,7 @@ app.get ('/users/:id', async, (req, res) => {
   res.render('userview', {user})
 })
 
-app.post('/users/delete/:id', async, (req, res) => {
+app.post('/users/delete/:id', async (req, res) => {
   const id = req.params.id
 
   //removendo dados do bd, pega o where para saber quem deletar
@@ -70,7 +70,7 @@ app.post('/users/delete/:id', async, (req, res) => {
   res.redirect('/')
 })
 
-app.get('/users/edit/:id', async, (req, res) => {
+app.get('/users/edit/:id', async (req, res) => {
   //atualizar os dados. Pega o que digitou e depois atualiza o dado no bd
   const id = req.params.id
 
@@ -80,7 +80,7 @@ app.get('/users/edit/:id', async, (req, res) => {
   res.render('useredit', {user})
 })
 
-app.post('/users/update/:id', async, (req, res) => {
+app.post('/users/update/:id', async (req, res) => {
   const id = req.params.id
   const name = req.body.name
   const occupation = req.body.occupation
@@ -106,7 +106,7 @@ app.post('/users/update/:id', async, (req, res) => {
   res.redirect('/')
 })
 
-app.get('/', async, (req, res) => {
+app.get('/', async (req, res) => {
 
   //retorna um array com os dados do BD, pegar dados.
  const users = await User.findAll({raw:true}) //{raw:true} : para o array vim com as inf que precisamos mais diretamente
